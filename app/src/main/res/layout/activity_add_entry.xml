@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_400"
+    android:orientation="vertical"
+    tools:context=".AddEntryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_add_entry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_button_back"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_back"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserratmedium"
+                android:gravity="center_vertical"
+                android:text="@string/add_entry"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/button_save"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_below="@id/app_bar_add_entry"
+        android:src="@drawable/ic_elements"
+        android:scaleType="centerCrop" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_250sdp"
+                android:background="@drawable/bg_card_round"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:hint="@string/title"
+                    android:textColorHint="@color/blue_grey_500"
+                    app:boxStrokeColor="@color/edit_text_stroke_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratregular"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/blue_grey_300"
+                        android:textSize="@dimen/_13sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:hint="@string/description"
+                    android:textColorHint="@color/blue_grey_500"
+                    app:boxStrokeColor="@color/edit_text_stroke_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratregular"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:textColor="@color/blue_grey_300"
+                        android:textSize="@dimen/_12sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

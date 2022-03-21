@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyDiary</string>
+    <string name="search">Search</string>
+    <string name="add_diary_entry">Add Diary Entry</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="share">Share</string>
+    <string name="entry_detail">Entry Detail</string>
+    <string name="edit_entry">Edit Entry</string>
+    <string name="modify">Modify</string>
+</resources>
